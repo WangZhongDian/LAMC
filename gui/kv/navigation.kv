@@ -1,0 +1,43 @@
+#:kivy 2.3.0
+
+<NavButton@MDButton>:
+    theme_width: "Custom"
+    size_hint_x: .5
+
+<Navigation@MDBoxLayout>:
+    size_hint_y: 1
+    size_hint_x: None
+    width: dp(160)
+    MDGridLayout:
+        cols: 1
+        spacing: dp(10)
+        padding: dp(10)
+        md_bg_color: '#f5f5f5'
+        NavButton:
+            id: home_button
+            on_release: app.getParentClass(self,'id',"right_main_SM").current = 'homescreen'
+            MDButtonText:
+                text: "Home" if app.language == "en" else "主页"
+            MDButtonIcon:
+                icon: "home"
+        NavButton:
+            id: categories_button
+            on_release: app.getParentClass(self,'id',"right_main_SM").current = 'categoriesscreen'
+            MDButtonText:
+                text: "Categories" if app.language == "en" else "分类"
+            MDButtonIcon:
+                icon: "gamepad"
+        NavButton:
+            id: settings_button
+            on_release: app.getParentClass(self,'id',"right_main_SM").current = 'settingsscreen'
+            MDButtonText:
+                text: "Settings" if app.language == "en" else "设置"
+            MDButtonIcon:
+                icon: "cog"
+        NavButton:
+            id : about_button
+            on_release: app.getParentClass(self,'id',"right_main_SM").current = 'aboutscree'
+            MDButtonText:
+                text: "About" if app.language == "en" else "关于"
+            MDButtonIcon:
+                icon: "information"

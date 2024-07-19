@@ -1,0 +1,16 @@
+#:kivy 2.3.0
+#: include "gui/kv/navigation.kv"
+
+MDScreen:
+    MDBoxLayout:
+        Navigation:
+        MDScreenManager:
+            id: right_main_SM
+            HomeScreen:
+                name: "homescreen"
+            CategoriesScreen:
+                name: "categoriesscreen"
+            SettingsScreen:
+                name: "settingsscreen"
+            AboutScreen:
+                name: "aboutscree"

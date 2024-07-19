@@ -1,0 +1,33 @@
+#:kivy 2.3.0
+
+#: include "gui/kv/home/appCard.kv"
+
+<HomeScreen>:
+    md_bg_color: (1, 1, 1, 1)
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDBoxLayout:
+            size_hint_y: None
+            height: search_field.height
+            MDTextField:
+                id: search_field
+                mode: "filled"
+                MDTextFieldLeadingIcon:
+                    icon: "magnify"
+                MDTextFieldHintText:
+                    text: "Search" if app.language == "en" else "搜索"
+            
+        MDBoxLayout:
+            MDScrollView:
+                do_scroll_x: False
+                MDStackLayout:
+                    spacing: dp(10)
+                    padding: (dp(50), dp(10), dp(10), dp(50))
+                    adaptive_height: True
+                    AppCard:
+                    AppCard:
+                    AppCard:
+                    AppCard:
+                    AppCard:
+                    AppCard:
+                            
